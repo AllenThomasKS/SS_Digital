@@ -73,50 +73,6 @@
 		</div>
 	</section>
 
-	<section id="portfolios" class="portfolios fancyboxeffect mb-6">	
-		<div class="container">
-			<div class="row">
-				<div class="section-header text-center">
-					<h2 class="section-title pb-4 text-uppercase">~ Portfolios ~</h2>
-				</div>
-				<div class="portfolios-content d-flex flex-wrap">
-					<div class="content col-md-4 mb-3">
-						<a class="image-link js-scroll down-enter" rel="gallery" href="images/model1.jpg">
-							<img src="images/model1.jpg" alt="model" class="portoImg">
-							<div class="overlay-content text-center light">
-								<h3 class="title">Portraits</h3>
-								<span>View More</span>
-							</div>
-						</a>
-					</div><!--content-->
-
-					<div class="content col-md-4 mb-3">
-						<a class="image-link js-scroll down-enter" rel="gallery" href="images/model2.jpg">
-							<img src="images/model2.jpg" alt="model" class="portoImg">
-							<div class="overlay-content text-center light">
-								<h3 class="title">Wedding</h3>
-								<span>View More</span>
-							</div>
-						</a>
-					</div><!--content-->
-
-					<div class="content col-md-4">
-						<a class="image-link js-scroll down-enter" rel="gallery" href="images/model3.jpg">
-							<img src="images/model3.jpg" alt="model" class="portoImg">
-							<div class="overlay-content text-center light">
-								<h3 class="title">Wedding</h3>
-								<span>View More</span>
-							</div>
-						</a>
-					</div><!--content-->				
-				</div>
-			</div>
-				<div class="pix_btn text-center">
-					<button class="btn-hvr-effects5 mt-5"><span>View Portfolio</span></button> 
-				</div>	
-		</div>
-	</section>
-
 	<section id="services" class="services padding-large darkest dark-overlay" style="background: url(images/servicebg.jpg) no-repeat; background-size: cover; filter: grayscale(100%);">
 		<div class="container">
 			<div class="row">
@@ -146,45 +102,6 @@
 						<p>With expert photo editing, we ensure every image is polished and perfect, preserving your moments with artistry and precision.</p>
 					</div><!--content-->
 				</div><!--services-content-->
-			</div>
-		</div>
-	</section>
-
-	<section id="testimonials" class="testimonials-wrap padding-medium">
-		<div class="container">
-			<div class="row">
-				<div class="reviews-content col-md-12 text-center">
-					<div class="section-header text-center">
-						<h2 class="section-title text-uppercase">~ Testimonials ~</h2>
-					</div>
-
-					<div class="testimonial-slider">
-						<div class="testimonials-inner text-center pt-50">
-							<img src="images/founder.jpg" alt="reviewer" class="reviewImg img-circle align-center">
-							<p>SS Digital has helped us capture moments in ways we never imagined, saving us countless hours and delivering stunning results.</p>
-							<div class="testimonial-author text-uppercase">
-								<strong class="name d-flex justify-content-center mt-3">"CEO Executive Events"</strong>
-							</div>
-						</div><!--reviews-info-->
-
-						<div class="testimonials-inner pt-50">
-							<img src="images/couple.jpg" alt="reviewer" class="reviewImg img-circle align-center">
-							<p>He was very easy to work with and made us feel really ease. The finished product was exactly what we envisioned. He listened to exactly what we wanted, and I never felt like I was being made to pose - the whole process was very natural. We were able to go and enjoy our night with the guests and Jack took care of the rest</p>
-							<div class="testimonial-author text-uppercase">
-								<strong class="name d-flex justify-content-center mt-3">"Simona"</strong>
-							</div>
-						</div><!--reviews-info-->
-
-						<div class="testimonials-inner pt-50">
-							<img src="images/couple.jpg" alt="reviewer" class="reviewImg img-circle align-center">
-							<p>Photography that captures connections and emotions that you celebrate on your wedding day.</p>
-							<div class="testimonial-author text-uppercase">
-								<strong class="name d-flex justify-content-center mt-3">"Jean Morgan"</strong>
-							</div>
-						</div><!--reviews-info-->
-
-					</div><!--testimonial-slider-->				
-				</div><!--col-md-12-->
 			</div>
 		</div>
 	</section>
@@ -310,38 +227,38 @@
 	<section id="contact" class="contact-information">
 		<div class="container">
 			<div class="row">
-				<form action="https://api.web3forms.com/submit" method="POST" class="contact-form d-flex flex-wrap mt-4 col-md-12 dark">
+				<form action="https://api.web3forms.com/submit" method="POST" class="contact-form d-flex flex-wrap mt-4 col-md-12 dark" onsubmit="return validateForm()">
 					<div class="text-input flex-container">
 						<input type="hidden" name="access_key" value="6cbe253f-f230-43ce-a584-382c48ef3104">
 						<div class="inputContainer col-md-6 pl-0 pr-0">
-							<input type="text" name="name" placeholder="First Name" class="name mb-3">
+							<input type="text" name="first_name" placeholder="First Name" class="name mb-3" id="first_name" required>
 							<i class="icon icon-user"></i>
 						</div>
 						<div class="inputContainer col-md-6 pr-0">
-							<input type="text" name="name" placeholder="Last Name" class="name mb-3">
+							<input type="text" name="last_name" placeholder="Last Name" class="name mb-3" id="last_name" required>
 							<i class="icon icon-user"></i>
 						</div>
-					</div><!--text-input-->
+					</div>
 					<div class="text-input flex-container">
 						<div class="inputContainer col-md-6 pl-0 pr-0">
-							<input type="text" name="E-mail" placeholder="Your E-mail Address" class="mr-3 mb-3">
+							<input type="email" name="email" placeholder="Your E-mail Address" class="mr-3 mb-3" id="email" required>
 							<i class="icon icon-envelope"></i>
 						</div>
 						<div class="inputContainer col-md-6 pr-0">
-							<input type="text" name="number" placeholder="phone" class="mb-3">
+							<input type="number" name="phone" placeholder="Phone" class="mb-3" id="phone" required>
 							<i class="icon icon-phone"></i>
 						</div>
 					</div>
 					<div class="inputContainer col-md-12 pl-0 pr-0">
-						<input type="text" name="Subject" placeholder="Subject" class="mb-3">
+						<input type="text" name="subject" placeholder="Subject" class="mb-3" id="subject" required>
 						<i class="icon icon-edit"></i>
 					</div>
 					<div class="inputContainer col-md-12 pl-0 pr-0">
-						<textarea placeholder="Message" style="height: 150px;"></textarea>
+						<textarea name="message" placeholder="Message" style="height: 150px;" id="message" required></textarea>
 						<i class="icon icon-edit"></i>
 					</div>
 					<div class="pix_btn text-center">
-						<button type="submit" class="btn-hvr-effects5 mt-5" value="Send Message"><span>Send it</span></button> 
+						<button type="submit" class="btn-hvr-effects5 mt-5" value="Send Message" id="submitBtn" disabled><span>Send it</span></button>
 					</div>
 				</form>
 			</div>
@@ -389,9 +306,9 @@
 						<h5 class="widget-title text-uppercase">Stay in touch</h5>
 						<ul class="list-unstyled">
 							<li><strong>SS Digital</strong></li>
-							<li>Edappally</li>
-							<li>Street</li>
-							<li>House number</li>
+							<li>Trivandrum, Ernakulam</li>
+							<!-- <li>Street</li> -->
+							<!-- <li>House number</li> -->
 							<li><a href="#">ssdigitalstvm@gmail.com</a></li>
 						</ul>
 					</div>
@@ -407,7 +324,7 @@
 		<div class="container">
 			<div class="padding-xsmall text-center">
 				<div class="copyright color-secondary">
-					<p class="mb-0">© 2024 SS Digital. All Rights Reserved. Created by Capital Rush
+					<p class="mb-0">© 2024 SS Digital. All Rights Reserved.
 				</div>
 			</div>
 		</div>
@@ -427,6 +344,46 @@
 
 	<script type="text/javascript" src="js/plugins.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
+	<script>
+		// Check all fields and enable/disable the submit button
+		function checkFields() {
+			const fields = [
+				document.getElementById('first_name').value.trim(),
+				document.getElementById('last_name').value.trim(),
+				document.getElementById('email').value.trim(),
+				document.getElementById('phone').value.trim(),
+				document.getElementById('subject').value.trim(),
+				document.getElementById('message').value.trim()
+			];
+			
+			// Enable submit button if all fields are filled, else disable it
+			document.getElementById('submitBtn').disabled = !fields.every(value => value !== '');
+		}
+	
+		// Validate form submission and show an alert if fields are missing
+		function validateForm() {
+			const fields = [
+				document.getElementById('first_name').value.trim(),
+				document.getElementById('last_name').value.trim(),
+				document.getElementById('email').value.trim(),
+				document.getElementById('phone').value.trim(),
+				document.getElementById('subject').value.trim(),
+				document.getElementById('message').value.trim()
+			];
+	
+			if (fields.every(value => value !== '')) {
+				return true; // Allow form submission
+			} else {
+				alert("Please fill in all required fields.");
+				return false; // Prevent form submission
+			}
+		}
+	
+		// Attach input event listeners to all input and textarea fields
+		document.querySelectorAll('input, textarea').forEach((input) => {
+			input.addEventListener('input', checkFields);
+		});
+	</script>
 
 </body>
 </html>
